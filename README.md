@@ -1,4 +1,3 @@
-He modificado la sección de tecnologías para que la descripción sea más clara y útil. Aquí está la versión actualizada de tu `README.md` que incluye la mención de dónde obtener la API de TMDB.
 
 -----
 
