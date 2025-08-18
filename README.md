@@ -52,6 +52,24 @@ netflix-clone/
 └── vite.config.js
 ```
 
+
+### Instalación y Ejecución
+
+Para instalar las dependencias y ejecutar el proyecto en modo desarrollo:
+```
+npm install
+npm run dev
+```
+La aplicación se abrirá en: http://localhost:5173
+
+
+### Capturas de Pantalla
+El flujo de pantallas de la aplicación es el siguiente:
+
+![Login](/cap_login.png)
+![Registro](/cap_register.png)
+![Home](/cap_home.jpg)
+
 ### Configuración de Variables de Entorno
 Este proyecto requiere algunas claves API y configuraciones para funcionar correctamente (como las de Firebase y TMDB). Para mantener segura esta información sensible y facilitar la configuración, se utilizan variables de entorno.
 
