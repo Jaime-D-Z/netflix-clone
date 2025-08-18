@@ -24,7 +24,7 @@ dist-ssr
 *.sw?
 
 .env
-.firebase.js
+
 
 node_modules/
 Thumbs.db

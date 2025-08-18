@@ -51,3 +51,20 @@ netflix-clone/
 ├── README.md
 └── vite.config.js
 ```
+
+### Configuración de Variables de Entorno
+Este proyecto requiere algunas claves API y configuraciones para funcionar correctamente (como las de Firebase y TMDB). Para mantener segura esta información sensible y facilitar la configuración, se utilizan variables de entorno.
+
+Crea tu archivo .env: En la raíz del proyecto, encontrarás un archivo llamado .env.example. Este es una plantilla que lista todas las variables necesarias. Copia este archivo y renómbralo a .env.
+```
+cp .env.example .env
+```
+Rellena tus credenciales: Abre el nuevo archivo .env y reemplaza los valores de your_..._here con tus claves API y credenciales reales. Por ejemplo:
+```
+VITE_TMDB_TOKEN=tu_token_real_de_tmdb
+VITE_REACT_APP_FIREBASE_API_KEY=tu_api_key_real_de_firebase
+# ... y el resto de tus variables de Firebase
+```
+Importante: Asegúrate de que no haya espacios alrededor del signo = en el archivo .env.
+
+Seguridad: El archivo .env está configurado para ser ignorado por Git (gracias al .gitignore) para asegurar que tus claves secretas no sean subidas a repositorios públicos como GitHub. El archivo .env.example sí se sube, ya que solo es una guía.
