@@ -66,9 +66,18 @@ La aplicación se abrirá en: http://localhost:5173
 ### Capturas de Pantalla
 El flujo de pantallas de la aplicación es el siguiente:
 
-![Login](/cap_login.png)
-![Registro](/cap_register.png)
-![Home](/cap_home.jpg)
+### Login
+-----
+![Login](/public/cap_login.png)
+-----
+### Register
+-----
+![Registro](/public/cap_register.png)
+-----
+### Home
+-----
+![Home](/public/cap_home.png)
+-----
 
 ### Configuración de Variables de Entorno
 Este proyecto requiere algunas claves API y configuraciones para funcionar correctamente (como las de Firebase y TMDB). Para mantener segura esta información sensible y facilitar la configuración, se utilizan variables de entorno.
@@ -86,3 +95,6 @@ VITE_REACT_APP_FIREBASE_API_KEY=tu_api_key_real_de_firebase
 Importante: Asegúrate de que no haya espacios alrededor del signo = en el archivo .env.
 
 Seguridad: El archivo .env está configurado para ser ignorado por Git (gracias al .gitignore) para asegurar que tus claves secretas no sean subidas a repositorios públicos como GitHub. El archivo .env.example sí se sube, ya que solo es una guía.
+
+### Licencia
+Este proyecto se distribuye con fines educativos. Si lo utilizas, ajusta la licencia según tus necesidades.
