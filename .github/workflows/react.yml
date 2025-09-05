@@ -1,45 +1,34 @@
-name: Deploy to GitHub Pages
+name: React App CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
-  
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    branches: [ "main" ]
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20 # Use a stable Node.js version
+          node-version: 18
+          cache: "npm"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Build the project
+      - name: Build project
         run: npm run build
 
-      - name: Set up GitHub Pages
-        uses: actions/configure-pages@v4
-      
-      - name: Upload production artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload production-ready files
+        uses: actions/upload-artifact@v4
         with:
-          path: './dist' # The directory containing the built app
+          name: dist
+          path: dist
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
